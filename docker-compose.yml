@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  apiserver:
+    container_name: apiserver
+    image: 106061/apiserver:0.0.3
+    restart: always
+    ports:
+      - "9000:9000"

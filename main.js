@@ -1,5 +1,7 @@
 "use strict";
 
+const cfg = require("./config/config.json")
+
 const fastify = require("fastify")({
 	logger: true,
 });
@@ -26,7 +28,7 @@ fastify.post("/test", (req, rep) => {
 	}
 });
 
-fastify.listen(9000, (err, address) => {
+fastify.listen(cfg.httpserver, (err, address) => {
 	if (err) {
 		console.log(address + " >> " + err);
 		process.exit(1);
