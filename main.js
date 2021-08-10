@@ -7,7 +7,11 @@ const fastify = require("fastify")({
 	ignoreTrailingSlash: true
 });
 
-fastify.register(require("./route/mathroute.js"));
+fastify
+	.register(require("fastify-jwt"), {
+		secret: "supersecret"
+	})
+	.register(require("./route/mathroute.js"));
 
 fastify.get("/", (req, rep) => {
 	const msg = {
