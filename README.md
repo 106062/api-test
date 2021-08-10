@@ -14,8 +14,6 @@ format: `{ "num1": int , "num2": int }`
 
 return: `{ Result: string }`
 
-================================================================
-
 ## start server
 
 ``` bash
@@ -32,8 +30,6 @@ $ npm start
 $ docker-compose up -d
 ```
 
-================================================================
-
 ## RUN test case
 
 ``` bash
@@ -43,5 +39,3 @@ $ node ./test/get-test.js
 ``` bash
 $ node ./test/post-test.js
 ```
-
-================================================================

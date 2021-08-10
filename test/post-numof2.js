@@ -14,5 +14,3 @@ request.post("http://localhost:9000/numof2", { json: case1 }, (err, res, body) =
 
 	console.log((body));
 });
-
-
