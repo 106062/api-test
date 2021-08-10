@@ -3,6 +3,7 @@ WORKDIR /test-server
 COPY main.js .
 COPY package*.json ./
 COPY config/* ./config/
+COPY route/* ./route/
 RUN npm install
 
 EXPOSE 9000

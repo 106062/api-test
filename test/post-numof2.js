@@ -3,10 +3,11 @@
 const request = require("request");
 
 const case1 = {
-	"message": "hello"
+	"num1": "1",
+	"num2": "6",
 };
 
-request.post("http://localhost:9000/test", { json: case1 }, (err, res, body) => {
+request.post("http://localhost:9000/numof2", { json: case1 }, (err, res, body) => {
 	if (err) {
 		console.log(err);
 	}

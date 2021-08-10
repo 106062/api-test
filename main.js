@@ -1,10 +1,13 @@
 "use strict";
 
-const cfg = require("./config/config.json")
+const cfg = require("./config/config.json");
 
 const fastify = require("fastify")({
 	logger: true,
+	ignoreTrailingSlash: true
 });
+
+fastify.register(require("./route/mathroute.js"));
 
 fastify.get("/", (req, rep) => {
 	const msg = {
@@ -24,7 +27,7 @@ fastify.post("/test", (req, rep) => {
 		rep.send(JSON.stringify(ans));
 	} catch (err) {
 		console.log("/test: " + req + " >> err: " + err);
-		rep.send(1);
+		rep.send(404);
 	}
 });
 
