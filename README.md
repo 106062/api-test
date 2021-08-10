@@ -4,11 +4,17 @@
 
 - post : http://host:9000/test
 
-format: `{"message": string }`
+format: `{ "message": string }`
 
 return: `{ Text: ${message} }`
 
-================================
+- post : http://host:9000/numof2
+
+format: `{ "num1": int , "num2": int }`
+
+return: `{ Result: string }`
+
+================================================================
 
 ## start server
 
@@ -26,7 +32,7 @@ $ npm start
 $ docker-compose up -d
 ```
 
-================================
+================================================================
 
 ## RUN test case
 
@@ -38,4 +44,4 @@ $ node ./test/get-test.js
 $ node ./test/post-test.js
 ```
 
-================================
+================================================================
